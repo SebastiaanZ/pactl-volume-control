@@ -1,0 +1,21 @@
+jobs:
+- job: python_lint
+  displayName: 'flake8 linting'
+  pool:
+    vmImage: ubuntu-16.04
+
+  variables:
+    PIP_CACHE_DIR: .cache/pip
+
+  steps:
+  - task: UsePythonVersion@0
+    displayName: 'Set Python Version'
+    inputs:
+      versionSpec: '3.7.x'
+      addToPath: true
+
+  - script: python3 -m pip install pipenv && pipenv install --dev --system
+    displayName: 'Install Project Environment'
+
+  - script: python3 -m flake8
+    displayName: 'Run Linter'
