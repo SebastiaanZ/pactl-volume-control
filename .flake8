@@ -1,0 +1,14 @@
+[flake8]
+max-line-length=100
+max-complexity=10
+import-order-style=pycharm
+docstring-convention=all
+exclude=
+    __pycache__,
+    .cache,
+    venv,
+    .venv,
+    tests,
+    .idea
+ignore =
+    D400

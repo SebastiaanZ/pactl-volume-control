@@ -1,0 +1,21 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+flake8 = "~=3.7"
+flake8-annotations = "~=1.0"
+flake8-docstrings = "~=1.4"
+flake8-bugbear = "~=19.8"
+flake8-import-order = "~=0.18"
+flake8-string-format = "~=0.2"
+flake8-tidy-imports = "~=2.0"
+
+[packages]
+
+[requires]
+python_version = "3.7"
+
+[scripts]
+lint = "flake8"
